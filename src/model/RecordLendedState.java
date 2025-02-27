@@ -1,31 +1,32 @@
 package model;
 
-public class RecordLendedState implements RecordState{
-    private String lendedTo;
+public class RecordLendedState implements RecordState {
     private Record record;
 
     public RecordLendedState(Record record, String lendTo) {
-        this.lendedTo = lendTo;
         this.record = record;
+        // Entry
+        record.setLandedTo(lendTo);
     }
 
     @Override
-    public void lend(String username) {
-
+    public void lendRecord(String username) {
+        throw new IllegalStateException("Pladen er allerede udlånt");
     }
 
     @Override
-    public void reserve(String username) {
-        record.setState(new RecordReservedState(record, this.lendedTo, username));
+    public void reserveRecord(String username) {
+        record.setState(new RecordReservedState(record, username));
     }
 
     @Override
-    public void remove() {
+    public void removeRecord() {
         record.setState(new RecordToRemoveState(record));
     }
 
     @Override
     public void returnRecord() {
-
+        record.setLandedTo(null);
+        record.setState(new RecordAvailableState(record));
     }
 }
