@@ -10,8 +10,10 @@ public class RecordLibrary implements Model{
         return records.get(index);
     }
 
+
     @Override
     public ArrayList<Record> getAllRecords() {
+        update();
         return records;
     }
 
@@ -23,5 +25,13 @@ public class RecordLibrary implements Model{
     @Override
     public void removeRecord(Record record) {
         this.records.remove(record);
+    }
+    @Override
+    public void update() {
+        for (int i = records.size()-1 ; i >= 0; i--) {
+            if (records.get(i).isRemove()){
+                records.remove(i);
+            }
+        }
     }
 }
