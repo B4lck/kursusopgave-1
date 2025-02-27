@@ -22,7 +22,7 @@ public class RecordAvailableState implements RecordState {
 
     @Override
     public void removeRecord() {
-        throw new IllegalStateException("Pladen er ikke lånt");
+        record.setState(new RecordReadyToRemoveState(record));
     }
 
     @Override

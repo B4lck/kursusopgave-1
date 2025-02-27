@@ -8,6 +8,7 @@ public class Record {
 
     // TILFØJ TIL UML
     private String lendedToUsername;
+    private boolean remove = false;
 
     public Record(String title, String artist, int year) {
         set(title, artist, year);
@@ -41,6 +42,10 @@ public class Record {
         return state;
     }
 
+    public boolean isRemove() {
+        return remove;
+    }
+
     // OPDATER UML
     public void lendRecord(String username) {
         state.lendRecord(username);
@@ -61,7 +66,13 @@ public class Record {
         state.returnRecord();
     }
 
+    // OPDATER UML
     public void setLandedTo(String lendTo) {
         this.lendedToUsername = lendTo;
+    }
+
+    // OPDATER UML
+    public void setRemove(boolean remove) {
+        this.remove = remove;
     }
 }
