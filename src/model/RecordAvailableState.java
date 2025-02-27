@@ -1,29 +1,32 @@
 package model;
 
+/**
+ * State hvor pladen ikke er lånt, og kan lånes.
+ */
 public class RecordAvailableState implements RecordState {
-    private Record record;
+    private final Record record;
 
     public RecordAvailableState(Record record) {
         this.record = record;
     }
 
     @Override
-    public void lend(String username) {
+    public void lendRecord(String username) {
         record.setState(new RecordLendedState(record, username));
     }
 
     @Override
-    public void reserve(String username) {
-
+    public void reserveRecord(String username) {
+        throw new IllegalStateException("Pladen er ikke lånt");
     }
 
     @Override
-    public void remove() {
-
+    public void removeRecord() {
+        throw new IllegalStateException("Pladen er ikke lånt");
     }
 
     @Override
     public void returnRecord() {
-
+        throw new IllegalStateException("Pladen er ikke lånt");
     }
 }

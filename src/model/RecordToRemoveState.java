@@ -8,22 +8,22 @@ public class RecordToRemoveState implements RecordState {
     }
 
     @Override
-    public void lend(String username) {
-
+    public void lendRecord(String username) {
+        throw new IllegalStateException("Pladen skal fjernes, og kan derfor ikke lånes");
     }
 
     @Override
-    public void reserve(String username) {
-
+    public void reserveRecord(String username) {
+        throw new IllegalStateException("Pladen skal fjernes, og kan derfor ikke reserveres");
     }
 
     @Override
-    public void remove() {
-
+    public void removeRecord() {
+        throw new IllegalStateException("Pladen skal allerede fjernes");
     }
 
     @Override
     public void returnRecord() {
-
+        record.setLandedTo(null);
     }
 }

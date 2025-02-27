@@ -2,32 +2,30 @@ package model;
 
 public class RecordReservedState implements RecordState{
     private String reservedFor;
-    private String lendedTo;
     private Record record;
 
-    public RecordReservedState(Record record, String lendTo, String reserveFor) {
-        this.lendedTo = lendTo;
+    public RecordReservedState(Record record, String reserveFor) {
         this.record = record;
         this.reservedFor = reserveFor;
     }
 
     @Override
-    public void lend(String username) {
-
+    public void lendRecord(String username) {
+        throw new IllegalStateException("Pladen er allerede udlånt");
     }
 
     @Override
-    public void reserve(String username) {
-
+    public void reserveRecord(String username) {
+        throw new IllegalStateException("Pladen er allerede reserveret");
     }
 
     @Override
-    public void remove() {
-
+    public void removeRecord() {
+        record.setState(new RecordToRemoveState(record));
     }
 
     @Override
     public void returnRecord() {
-
+        record.setState(new RecordLendedState(record, reservedFor));
     }
 }
