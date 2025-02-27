@@ -24,7 +24,7 @@ public class RecordLendedToRemoveState implements RecordState {
 
     @Override
     public void returnRecord() {
-        record.setLandedTo(null);
+        record.setLendedTo(null);
         record.setState(new RecordLendedToRemoveState(record));
     }
 }

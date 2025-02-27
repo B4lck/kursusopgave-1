@@ -35,6 +35,11 @@
                               <Insets bottom="10.0" top="10.0" />
                            </padding>
                         </Button>
+                        <Button fx:id="loanReserveReturnButton" layoutX="20.0" layoutY="115.0" mnemonicParsing="false" prefWidth="80.0" text="Reserver">
+                           <padding>
+                              <Insets bottom="10.0" top="10.0" />
+                           </padding>
+                        </Button>
                      </children>
                   </VBox>
                   <Label fx:id="errorLabel" text="Error" textFill="RED" />

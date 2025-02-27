@@ -6,7 +6,7 @@ public class RecordLendedState implements RecordState {
     public RecordLendedState(Record record, String lendTo) {
         this.record = record;
         // Entry
-        record.setLandedTo(lendTo);
+        record.setLendedTo(lendTo);
     }
 
     @Override
@@ -26,7 +26,7 @@ public class RecordLendedState implements RecordState {
 
     @Override
     public void returnRecord() {
-        record.setLandedTo(null);
+        record.setLendedTo(null);
         record.setState(new RecordAvailableState(record));
     }
 }

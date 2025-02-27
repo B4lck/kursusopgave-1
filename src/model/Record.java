@@ -67,7 +67,7 @@ public class Record {
     }
 
     // OPDATER UML
-    public void setLandedTo(String lendTo) {
+    public void setLendedTo(String lendTo) {
         this.lendedToUsername = lendTo;
     }
 
