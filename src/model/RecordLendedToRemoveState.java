@@ -1,9 +1,9 @@
 package model;
 
-public class RecordToRemoveState implements RecordState {
+public class RecordLendedToRemoveState implements RecordState {
     private Record record;
 
-    public RecordToRemoveState(Record record) {
+    public RecordLendedToRemoveState(Record record) {
         this.record = record;
     }
 
@@ -25,5 +25,6 @@ public class RecordToRemoveState implements RecordState {
     @Override
     public void returnRecord() {
         record.setLandedTo(null);
+        record.setState(new RecordLendedToRemoveState(record));
     }
 }

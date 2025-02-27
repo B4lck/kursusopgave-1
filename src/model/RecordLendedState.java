@@ -21,7 +21,7 @@ public class RecordLendedState implements RecordState {
 
     @Override
     public void removeRecord() {
-        record.setState(new RecordToRemoveState(record));
+        record.setState(new RecordLendedToRemoveState(record));
     }
 
     @Override
