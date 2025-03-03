@@ -13,20 +13,20 @@
    <children>
       <VBox alignment="CENTER" prefHeight="400.0" prefWidth="600.0" spacing="10.0">
          <children>
-            <Label id="headerTitle" text="Header">
+            <Label fx:id="headerTitle" text="Header">
                <font>
                   <Font size="24.0" />
                </font>
             </Label>
-            <TextField id="titleField" promptText="Titel" />
-            <TextField id="artistField" layoutX="10.0" layoutY="206.0" promptText="Artist" />
-            <TextField id="yearField" layoutX="10.0" layoutY="219.0" promptText="Årstal" />
-            <Label id="stateProperty" layoutX="291.0" layoutY="163.0" text="State">
+            <TextField fx:id="titleField" promptText="Titel" />
+            <TextField fx:id="artistField" layoutX="10.0" layoutY="206.0" promptText="Artist" />
+            <TextField fx:id="yearField" layoutX="10.0" layoutY="219.0" promptText="Årstal" />
+            <Label fx:id="stateProperty" layoutX="291.0" layoutY="163.0" text="State">
                <font>
                   <Font size="16.0" />
                </font>
             </Label>
-            <Label id="errorLabel" layoutX="297.0" layoutY="248.0" text="Error..." textFill="RED">
+            <Label fx:id="errorLabel" layoutX="297.0" layoutY="248.0" text="Error..." textFill="RED">
                <font>
                   <Font size="16.0" />
                </font>
