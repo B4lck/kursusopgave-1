@@ -75,4 +75,8 @@ public class Record {
     public void setRemove(boolean remove) {
         this.remove = remove;
     }
+
+    public String getLendedToUsername() {
+        return this.lendedToUsername;
+    }
 }

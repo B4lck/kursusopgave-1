@@ -25,17 +25,17 @@
                   </TextField>
                   <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="10.0">
                      <children>
-                        <Button fx:id="addEditButton" mnemonicParsing="false" prefWidth="80.0" text="Opdater/Opret">
+                        <Button onAction="#addEdit" fx:id="addEditButton" mnemonicParsing="false" prefWidth="80.0" text="Opdater/Opret">
                            <padding>
                               <Insets bottom="10.0" top="10.0" />
                            </padding>
                         </Button>
-                        <Button fx:id="removeButton" mnemonicParsing="false" prefWidth="80.0" text="Fjern">
+                        <Button onAction="#remove" fx:id="removeButton" mnemonicParsing="false" prefWidth="80.0" text="Fjern">
                            <padding>
                               <Insets bottom="10.0" top="10.0" />
                            </padding>
                         </Button>
-                        <Button fx:id="loanReserveReturnButton" layoutX="20.0" layoutY="115.0" mnemonicParsing="false" prefWidth="80.0" text="Reserver">
+                        <Button onAction="#loanReserveReturn" fx:id="loanReserveReturnButton" layoutX="20.0" layoutY="115.0" mnemonicParsing="false" prefWidth="80.0" text="Lån/Reserver/Aflever">
                            <padding>
                               <Insets bottom="10.0" top="10.0" />
                            </padding>

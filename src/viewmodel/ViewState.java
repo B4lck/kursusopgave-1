@@ -5,7 +5,7 @@ import model.Record;
 public class ViewState {
     private Record selectedRecord;
     private boolean removeRecord;
-    private ManageRecordViewModel manageRecordViewModel;
+    private String username;
 
     public Record getSelectedRecord() {
         return selectedRecord;
@@ -22,4 +22,13 @@ public class ViewState {
     public void setRemoveRecord(boolean removeRecord) {
         this.removeRecord = removeRecord;
     }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public String getUsername() {
+        return this.username;
+    }
+
 }
