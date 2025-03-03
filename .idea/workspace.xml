@@ -1,38 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="0aebdb1a-c84b-4bcd-a93c-e2535af31749" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MyApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/Model.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/Record.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/RecordAvailableState.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/RecordLendedState.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/RecordLibrary.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/RecordReservedState.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/RecordState.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/RecordToRemoveState.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/view/ManageRecordViewController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/view/RecordListViewController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/view/ViewController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/view/ViewHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/viewmodel/ManageRecordViewModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/viewmodel/RecordListViewModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/viewmodel/SimpleRecordViewModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/viewmodel/ViewModelFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/viewmodel/ViewState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/kursusopgave-1.iml" beforeDir="false" />
+    <list default="true" id="0aebdb1a-c84b-4bcd-a93c-e2535af31749" name="Changes" comment="ManageRecordViewModel">
+      <change afterPath="$PROJECT_DIR$/src/view/ViewID.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kursusopgave-1.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kursusopgave-1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/kursusopgave-1.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MyApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/ViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/ViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/ViewHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/ViewHandler.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -62,16 +55,30 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.Main.executor": "Run",
+    "Application.MyApplication.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/Users/malthe/Desktop/Projekter/VIA/kursusopgave-1",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "settings.sync",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="model" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -90,10 +97,81 @@
       <updated>1740657665752</updated>
       <workItem from="1740657666979" duration="88000" />
       <workItem from="1740657760145" duration="98000" />
+      <workItem from="1740657861169" duration="2555000" />
+      <workItem from="1740660811216" duration="649000" />
+      <workItem from="1740990942884" duration="3939000" />
+      <workItem from="1740997538224" duration="332000" />
     </task>
+    <task id="LOCAL-00001" summary="Elsker java">
+      <option name="closed" value="true" />
+      <created>1740657898673</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1740657898673</updated>
+    </task>
+    <task id="LOCAL-00002" summary="diagrammer">
+      <option name="closed" value="true" />
+      <created>1740658191849</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1740658191849</updated>
+    </task>
+    <task id="LOCAL-00003" summary="State machine">
+      <option name="closed" value="true" />
+      <created>1740659428016</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1740659428016</updated>
+    </task>
+    <task id="LOCAL-00004" summary="State machine 2">
+      <option name="closed" value="true" />
+      <created>1740660018919</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1740660018919</updated>
+    </task>
+    <task id="LOCAL-00005" summary="State machine opdatering">
+      <option name="closed" value="true" />
+      <created>1740660843874</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1740660843874</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Diverse">
+      <option name="closed" value="true" />
+      <created>1740994660254</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1740994660254</updated>
+    </task>
+    <task id="LOCAL-00007" summary="ManageRecordViewModel">
+      <option name="closed" value="true" />
+      <created>1740995022618</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1740995022618</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Elsker java" />
+    <MESSAGE value="diagrammer" />
+    <MESSAGE value="State machine" />
+    <MESSAGE value="State machine 2" />
+    <MESSAGE value="State machine opdatering" />
+    <MESSAGE value="Diverse" />
+    <MESSAGE value="ManageRecordViewModel" />
+    <option name="LAST_COMMIT_MESSAGE" value="ManageRecordViewModel" />
   </component>
 </project>
