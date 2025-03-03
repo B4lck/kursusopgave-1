@@ -18,11 +18,15 @@ public class RecordListViewModel implements PropertyChangeListener {
     private Model model;
     private ViewState viewState;
 
-    private StringProperty username = new SimpleStringProperty();
+    private StringProperty userNameProperty = new SimpleStringProperty();
+
+    private StringProperty errorProperty = new SimpleStringProperty();
+    private ObjectProperty<Boolean> canEditProperty = new SimpleObjectProperty<>();
+    private StringProperty loanReserveReturnProperty = new SimpleStringProperty();
 
     @Override
     public void propertyChange(PropertyChangeEvent evt) {
-        loadRecordList();
+        clear();
     }
 
     public RecordListViewModel(Model model, ViewState viewState) {
@@ -31,55 +35,64 @@ public class RecordListViewModel implements PropertyChangeListener {
 
         this.model.addListener(this);
 
-        loadRecordList();
+        selectedRecordProperty.addListener((evt, oldValue, newValue) -> {
+            setSelectedRecord(newValue);
+        });
+
+        clear();
     }
 
     public void clear() {
         list.clear();
+        canEditProperty.set(false);
+        loadRecordList();
     }
 
     private void loadRecordList() {
-        clear();
         for (Record record : model.getAllRecords()) {
             this.list.add(new SimpleRecordViewModel(record));
         }
     }
 
     public void setSelectedRecord(SimpleRecordViewModel recordViewModel) {
-        viewState.setSelectedRecord(recordViewModel.getRecord());
+        viewState.setSelectedRecord(recordViewModel != null ? recordViewModel.getRecord() : null);
+
+        canEditProperty.set(recordViewModel != null);
     }
 
     public void addEditRecord() {
-        setSelectedRecord(selectedRecordProperty.get());
     }
 
     public void removeRecord() {
-        setSelectedRecord(selectedRecordProperty.get());
         viewState.setRemoveRecord(true);
+        clear();
     }
 
     public void loanReserveReturnRecord() {
         Record record = viewState.getSelectedRecord();
 
-        if (record.getState().getClass().equals(RecordAvailableState.class)) {
-            // Hvis den er tilgængelig
-            record.lendRecord(viewState.getUsername());
-        } else if(record.getState().getClass().equals(RecordLendedState.class) && viewState.getUsername().equals(record.getLendedToUsername())) {
-            // Hvis den er udlejet, og lejeren har trykket
-            record.returnRecord();
-        } else if (record.getState().getClass().equals(RecordLendedState.class) && !viewState.getUsername().equals(record.getLendedToUsername())) {
-            // Hvis den er udlejet, og en anden har trykket
-            record.reserveRecord(viewState.getUsername());
-        } else if (record.getState().getClass().equals(RecordReservedState.class) && viewState.getUsername().equals(record.getLendedToUsername())) {
-            // Hvis den er reserveret, og lejeren har trykket
-            record.returnRecord();
-        } else {
-            throw new IllegalStateException("Der foregår noget mystisk");
-        }
-    }
+        String user = userNameProperty.get();
 
-    public void setCurrentUser() {
-        viewState.setUsername(username.get());
+        try {
+            if (record.getState().getClass().equals(RecordAvailableState.class)) {
+                // Hvis den er tilgængelig
+                record.lendRecord(user);
+            } else if (record.getState().getClass().equals(RecordLendedState.class) && user.equals(record.getLendedToUsername())) {
+                // Hvis den er udlejet, og lejeren har trykket
+                record.returnRecord();
+            } else if (record.getState().getClass().equals(RecordLendedState.class) && !user.equals(record.getLendedToUsername())) {
+                // Hvis den er udlejet, og en anden har trykket
+                record.reserveRecord(user);
+            } else if (record.getState().getClass().equals(RecordReservedState.class) && user.equals(record.getLendedToUsername())) {
+                // Hvis den er reserveret, og lejeren har trykket
+                record.returnRecord();
+            } else {
+                throw new IllegalStateException("Der foregår noget mystisk");
+            }
+            clear();
+        } catch (Exception e) {
+            errorProperty.set(e.getMessage());
+        }
     }
 
     public ObservableList<SimpleRecordViewModel> getList() {
@@ -88,6 +101,22 @@ public class RecordListViewModel implements PropertyChangeListener {
 
     public ObjectProperty<SimpleRecordViewModel> getSelectedRecordProperty() {
         return selectedRecordProperty;
+    }
+
+    public StringProperty getUserNameProperty() {
+        return userNameProperty;
+    }
+
+    public StringProperty getErrorProperty() {
+        return errorProperty;
+    }
+
+    public ObjectProperty<Boolean> getCanEditProperty() {
+        return canEditProperty;
+    }
+
+    public StringProperty getLoanReserveReturnProperty() {
+        return loanReserveReturnProperty;
     }
 }
 

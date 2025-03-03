@@ -27,8 +27,6 @@ public class RecordListViewController extends ViewController<RecordListViewModel
     @FXML
     private Button loanReserveReturnButton;
 
-    private RecordListViewModel recordListViewModel;
-
     public void reset() {
 
     }
@@ -41,7 +39,17 @@ public class RecordListViewController extends ViewController<RecordListViewModel
         loanStateColumn.setCellValueFactory(cellData -> cellData.getValue().getStateProperty());
         recordsTable.setItems(getViewModel().getList());
 
+        usernameField.textProperty().bindBidirectional(getViewModel().getUserNameProperty());
+
         getViewModel().getSelectedRecordProperty().bind(recordsTable.getSelectionModel().selectedItemProperty());
+
+        getViewModel().getCanEditProperty().addListener((evt, oldValue, newValue) -> {
+            addEditButton.setText(newValue ? "Rediger" : "Tilføj");
+            removeButton.setDisable(!newValue);
+            loanReserveReturnButton.setDisable(!newValue);
+        });
+
+        loanReserveReturnButton.textProperty().bind(getViewModel().getLoanReserveReturnProperty());
     }
 
     @FXML
@@ -52,12 +60,12 @@ public class RecordListViewController extends ViewController<RecordListViewModel
 
     @FXML
     private void remove() {
-        recordListViewModel.removeRecord();
+        getViewModel().removeRecord();
         getViewHandler().openView(ViewID.MANAGE_RECORD);
     }
 
     @FXML
     private void loanReserveReturn() {
-        recordListViewModel.loanReserveReturnRecord();
+        getViewModel().loanReserveReturnRecord();
     }
 }

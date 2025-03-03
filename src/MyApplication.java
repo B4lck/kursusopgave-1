@@ -9,7 +9,7 @@ import viewmodel.ViewModelFactory;
 public class MyApplication extends Application
 {
     @Override
-    public void start(Stage primaryStage) throws Exception {
+    public void start(Stage primaryStage) {
         Model model = new RecordLibrary();
 
         model.addRecord(new Record("Let Me Entertain You", "Robbie Williams Jam", 2012));
