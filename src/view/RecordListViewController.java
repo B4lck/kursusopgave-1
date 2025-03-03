@@ -5,7 +5,7 @@ import javafx.scene.control.*;
 import viewmodel.RecordListViewModel;
 import viewmodel.SimpleRecordViewModel;
 
-public class RecordListViewController extends ViewController {
+public class RecordListViewController extends ViewController<RecordListViewModel> {
     @FXML
     private TableView<SimpleRecordViewModel> recordsTable;
     @FXML
@@ -27,30 +27,45 @@ public class RecordListViewController extends ViewController {
     @FXML
     private Button loanReserveReturnButton;
 
-    private RecordListViewModel recordListViewModel;
-
     public void reset() {
 
     }
 
     @Override
     protected void init() {
+        titleColumn.setCellValueFactory(cellData -> cellData.getValue().getTitleProperty());
+        artistColumn.setCellValueFactory(cellData -> cellData.getValue().getArtistProperty());
+//        yearColumn.setCellValueFactory(cellData -> cellData.getValue().getYearProperty());
+        loanStateColumn.setCellValueFactory(cellData -> cellData.getValue().getStateProperty());
+        recordsTable.setItems(getViewModel().getList());
 
+        usernameField.textProperty().bindBidirectional(getViewModel().getUserNameProperty());
+
+        getViewModel().getSelectedRecordProperty().bind(recordsTable.getSelectionModel().selectedItemProperty());
+
+        getViewModel().getCanEditProperty().addListener((evt, oldValue, newValue) -> {
+            addEditButton.setText(newValue ? "Rediger" : "Tilføj");
+            removeButton.setDisable(!newValue);
+            loanReserveReturnButton.setDisable(!newValue);
+        });
+
+        loanReserveReturnButton.textProperty().bind(getViewModel().getLoanReserveReturnProperty());
     }
 
     @FXML
     private void addEdit() {
-
+        getViewModel().addEditRecord();
+        getViewHandler().openView(ViewID.MANAGE_RECORD);
     }
 
     @FXML
     private void remove() {
-        recordListViewModel.removeRecord();
-
+        getViewModel().removeRecord();
+        getViewHandler().openView(ViewID.MANAGE_RECORD);
     }
 
     @FXML
     private void loanReserveReturn() {
-
+        getViewModel().loanReserveReturnRecord();
     }
 }
