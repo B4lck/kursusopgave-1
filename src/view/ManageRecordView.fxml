@@ -9,33 +9,32 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.ManageRecordViewController">
    <children>
       <VBox alignment="CENTER" prefHeight="400.0" prefWidth="600.0" spacing="10.0">
          <children>
-            <Label fx:id="headerTitle" text="Header">
+            <Label id="headerTitle" text="Header">
                <font>
                   <Font size="24.0" />
                </font>
             </Label>
-            <TextField fx:id="titleField" promptText="Titel" />
-            <TextField fx:id="artistField" layoutX="10.0" layoutY="206.0" promptText="Artist" />
-            <TextField fx:id="yearField" layoutX="10.0" layoutY="219.0" promptText="Årstal" />
-            <Label fx:id="stateProperty" layoutX="291.0" layoutY="163.0" text="State">
+            <TextField id="titleField" promptText="Titel" />
+            <TextField id="artistField" layoutX="10.0" layoutY="206.0" promptText="Artist" />
+            <TextField id="yearField" layoutX="10.0" layoutY="219.0" promptText="Årstal" />
+            <Label id="stateProperty" layoutX="291.0" layoutY="163.0" text="State">
                <font>
                   <Font size="16.0" />
                </font>
             </Label>
-            <Label fx:id="errorLabel" layoutX="297.0" layoutY="248.0" text="Error..." textFill="RED">
+            <Label id="errorLabel" layoutX="297.0" layoutY="248.0" text="Error..." textFill="RED">
                <font>
                   <Font size="16.0" />
                </font>
             </Label>
             <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="50.0">
                <children>
-                  <Button mnemonicParsing="false" prefWidth="100.0" text="Anuller" onAction="#cancel" />
-                  <Button mnemonicParsing="false" prefWidth="100.0" text="Opdater" onAction="#update" />
+                  <Button mnemonicParsing="false" onAction="#cancel" prefWidth="100.0" text="Anuller" />
+                  <Button mnemonicParsing="false" prefWidth="100.0" text="Opdater" />
                </children>
             </HBox>
          </children>
