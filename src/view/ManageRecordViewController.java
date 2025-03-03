@@ -26,6 +26,8 @@ public class ManageRecordViewController extends ViewController{
 
     @Override
     protected void init() {
+        titleField.textProperty().bindBidirectional(manageRecordViewModel.getTitleProperty());
+        artistField.textProperty().bindBidirectional(manageRecordViewModel.getArtistProperty());
 
     }
 
@@ -36,7 +38,7 @@ public class ManageRecordViewController extends ViewController{
 
     @FXML
     private void cancel() {
-
+        getViewHandler().openView(ViewID.RECORD_LIST);
     }
 
 }

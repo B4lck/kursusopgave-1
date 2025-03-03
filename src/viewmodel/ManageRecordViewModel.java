@@ -40,4 +40,17 @@ public class ManageRecordViewModel {
         Record record = this.viewState.getSelectedRecord();
         model.removeRecord(record);
     }
+
+    public StringProperty getArtistProperty() {
+        return artistProperty;
+    }
+
+    public IntegerProperty getYearProperty() {
+        return yearProperty;
+    }
+
+    public StringProperty getTitleProperty() {
+        return titleProperty;
+    }
+
 }
