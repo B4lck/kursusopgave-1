@@ -4,14 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="358be031-ee2a-4832-ab0d-b0c2dc7b94c9" name="Changes" comment="Mini fix på views igen">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="358be031-ee2a-4832-ab0d-b0c2dc7b94c9" name="Changes" comment="idk">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Record.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Record.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/view/ManageRecordView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/ManageRecordView.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/viewmodel/RecordListViewModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/viewmodel/RecordListViewModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/viewmodel/SimpleRecordViewModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/viewmodel/SimpleRecordViewModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/viewmodel/ViewState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/viewmodel/ViewState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/RecordListView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/RecordListView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/RecordListViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/RecordListViewController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +87,7 @@
       <workItem from="1740657760145" duration="98000" />
       <workItem from="1740658026755" duration="1040000" />
       <workItem from="1740659090421" duration="2317000" />
-      <workItem from="1740990879097" duration="2954000" />
+      <workItem from="1740990879097" duration="3710000" />
     </task>
     <task id="LOCAL-00001" summary="Views">
       <option name="closed" value="true" />
@@ -116,7 +113,15 @@
       <option name="project" value="LOCAL" />
       <updated>1740660466888</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="idk">
+      <option name="closed" value="true" />
+      <created>1740997265020</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1740997265020</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -126,6 +131,7 @@
     <MESSAGE value="Views" />
     <MESSAGE value="Mini fix på view" />
     <MESSAGE value="Mini fix på views igen" />
-    <option name="LAST_COMMIT_MESSAGE" value="Mini fix på views igen" />
+    <MESSAGE value="idk" />
+    <option name="LAST_COMMIT_MESSAGE" value="idk" />
   </component>
 </project>

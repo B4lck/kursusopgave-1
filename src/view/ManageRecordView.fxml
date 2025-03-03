@@ -34,7 +34,7 @@
             <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="50.0">
                <children>
                   <Button mnemonicParsing="false" onAction="#cancel" prefWidth="100.0" text="Anuller" />
-                  <Button mnemonicParsing="false" prefWidth="100.0" text="Opdater" />
+                  <Button mnemonicParsing="false" onAction="#update" prefWidth="100.0" text="Opdater" />
                </children>
             </HBox>
          </children>

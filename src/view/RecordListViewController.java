@@ -2,6 +2,7 @@ package view;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
+import viewmodel.RecordListViewModel;
 import viewmodel.SimpleRecordViewModel;
 
 public class RecordListViewController extends ViewController {
@@ -26,8 +27,30 @@ public class RecordListViewController extends ViewController {
     @FXML
     private Button loanReserveReturnButton;
 
+    private RecordListViewModel recordListViewModel;
+
+    public void reset() {
+
+    }
+
     @Override
     protected void init() {
+
+    }
+
+    @FXML
+    private void addEdit() {
+
+    }
+
+    @FXML
+    private void remove() {
+        recordListViewModel.removeRecord();
+
+    }
+
+    @FXML
+    private void loanReserveReturn() {
 
     }
 }
