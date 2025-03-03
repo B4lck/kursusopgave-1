@@ -9,6 +9,8 @@ public class SimpleRecordViewModel {
     private IntegerProperty yearProperty;
     private StringProperty stateProperty;
 
+    public SimpleRecordViewModel() {}
+
     public String getTitleProperty() {
         return titleProperty.get();
     }
