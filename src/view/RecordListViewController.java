@@ -28,7 +28,7 @@ public class RecordListViewController extends ViewController<RecordListViewModel
     private Button loanReserveReturnButton;
 
     public void reset() {
-
+        getViewModel().clear();
     }
 
     @Override

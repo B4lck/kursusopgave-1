@@ -55,7 +55,7 @@ public class RecordListViewModel implements PropertyChangeListener {
     }
 
     public void setSelectedRecord(SimpleRecordViewModel recordViewModel) {
-        viewState.setSelectedRecord(recordViewModel != null ? recordViewModel.getRecord() : null);
+        viewState.setSelectedRecord(recordViewModel == null ? null : recordViewModel.getRecord());
 
         canEditProperty.set(recordViewModel != null);
     }

@@ -71,6 +71,8 @@ public class ViewHandler {
             }
         }
 
+        vc.reset();
+
         return vc.getRoot();
     }
 

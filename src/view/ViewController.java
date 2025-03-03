@@ -17,6 +17,10 @@ public abstract class ViewController<T> {
 
     protected abstract void init();
 
+    public void reset() {
+
+    }
+
     public Region getRoot() {
         return root;
     }
