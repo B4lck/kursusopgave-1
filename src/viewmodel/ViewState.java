@@ -1,5 +1,7 @@
 package viewmodel;
 
+import model.Record;
+
 public class ViewState {
     private Record selectedRecord;
     private boolean removeRecord;
