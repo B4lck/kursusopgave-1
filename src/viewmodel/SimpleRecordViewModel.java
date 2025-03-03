@@ -8,4 +8,20 @@ public class SimpleRecordViewModel {
     private StringProperty artistProperty;
     private IntegerProperty yearProperty;
     private StringProperty stateProperty;
+
+    public String getTitleProperty() {
+        return titleProperty.get();
+    }
+
+    public String getArtistProperty() {
+        return artistProperty.get();
+    }
+
+    public int getYearProperty() {
+        return yearProperty.get();
+    }
+
+    public String getStateProperty() {
+        return stateProperty.get();
+    }
 }
