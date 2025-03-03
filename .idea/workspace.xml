@@ -4,16 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0aebdb1a-c84b-4bcd-a93c-e2535af31749" name="Changes" comment="ManageRecordViewModel">
-      <change afterPath="$PROJECT_DIR$/src/view/ViewID.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="0aebdb1a-c84b-4bcd-a93c-e2535af31749" name="Changes" comment="Views">
+      <change afterPath="$PROJECT_DIR$/src/model/PropertyChangeSubject.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kursusopgave-1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/kursusopgave-1.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kursusopgave-1/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kursusopgave-1/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kursusopgave-1/.idea/kursusopgave-1.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kursusopgave-1/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kursusopgave-1/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kursusopgave-1/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/kursusopgave-1/LICENSE" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MyApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/ViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/ViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/ViewHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/ViewHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Model.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Model.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/RecordLibrary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/RecordLibrary.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/RecordListViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/RecordListViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/viewmodel/RecordListViewModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/viewmodel/RecordListViewModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/viewmodel/SimpleRecordViewModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/viewmodel/SimpleRecordViewModel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +30,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -70,7 +77,7 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "settings.sync",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -100,7 +107,7 @@
       <workItem from="1740657861169" duration="2555000" />
       <workItem from="1740660811216" duration="649000" />
       <workItem from="1740990942884" duration="3939000" />
-      <workItem from="1740997538224" duration="332000" />
+      <workItem from="1740997538224" duration="2220000" />
     </task>
     <task id="LOCAL-00001" summary="Elsker java">
       <option name="closed" value="true" />
@@ -158,7 +165,15 @@
       <option name="project" value="LOCAL" />
       <updated>1740995022618</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Views">
+      <option name="closed" value="true" />
+      <created>1740997958610</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1740997958610</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -172,6 +187,7 @@
     <MESSAGE value="State machine opdatering" />
     <MESSAGE value="Diverse" />
     <MESSAGE value="ManageRecordViewModel" />
-    <option name="LAST_COMMIT_MESSAGE" value="ManageRecordViewModel" />
+    <MESSAGE value="Views" />
+    <option name="LAST_COMMIT_MESSAGE" value="Views" />
   </component>
 </project>

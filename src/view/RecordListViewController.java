@@ -5,7 +5,7 @@ import javafx.scene.control.*;
 import viewmodel.RecordListViewModel;
 import viewmodel.SimpleRecordViewModel;
 
-public class RecordListViewController extends ViewController {
+public class RecordListViewController extends ViewController<RecordListViewModel> {
     @FXML
     private TableView<SimpleRecordViewModel> recordsTable;
     @FXML
@@ -35,22 +35,29 @@ public class RecordListViewController extends ViewController {
 
     @Override
     protected void init() {
+        titleColumn.setCellValueFactory(cellData -> cellData.getValue().getTitleProperty());
+        artistColumn.setCellValueFactory(cellData -> cellData.getValue().getArtistProperty());
+//        yearColumn.setCellValueFactory(cellData -> cellData.getValue().getYearProperty());
+        loanStateColumn.setCellValueFactory(cellData -> cellData.getValue().getStateProperty());
+        recordsTable.setItems(getViewModel().getList());
 
+        getViewModel().getSelectedRecordProperty().bind(recordsTable.getSelectionModel().selectedItemProperty());
     }
 
     @FXML
     private void addEdit() {
-
+        getViewModel().addEditRecord();
+        getViewHandler().openView(ViewID.MANAGE_RECORD);
     }
 
     @FXML
     private void remove() {
         recordListViewModel.removeRecord();
-
+        getViewHandler().openView(ViewID.MANAGE_RECORD);
     }
 
     @FXML
     private void loanReserveReturn() {
-
+        recordListViewModel.loanReserveReturnRecord();
     }
 }

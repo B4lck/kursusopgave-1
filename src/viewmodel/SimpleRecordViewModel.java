@@ -29,20 +29,20 @@ public class SimpleRecordViewModel {
         this.stateProperty.setValue(record.getState().getClass().getName());
     }
 
-    public String getTitleProperty() {
-        return titleProperty.get();
+    public StringProperty getTitleProperty() {
+        return titleProperty;
     }
 
-    public String getArtistProperty() {
-        return artistProperty.get();
+    public StringProperty getArtistProperty() {
+        return artistProperty;
     }
 
-    public int getYearProperty() {
-        return yearProperty.get();
+    public IntegerProperty getYearProperty() {
+        return yearProperty;
     }
 
-    public String getStateProperty() {
-        return stateProperty.get();
+    public StringProperty getStateProperty() {
+        return stateProperty;
     }
 
     public Record getRecord() {
