@@ -22,7 +22,7 @@ public class RecordListViewModel implements PropertyChangeListener {
 
     private StringProperty errorProperty = new SimpleStringProperty();
     private ObjectProperty<Boolean> canEditProperty = new SimpleObjectProperty<>();
-    private StringProperty loanReserveReturnProperty = new SimpleStringProperty();
+    private StringProperty loanReserveReturnTextProperty = new SimpleStringProperty();
 
     @Override
     public void propertyChange(PropertyChangeEvent evt) {
@@ -77,13 +77,13 @@ public class RecordListViewModel implements PropertyChangeListener {
             if (record.getState().getClass().equals(RecordAvailableState.class)) {
                 // Hvis den er tilgængelig
                 record.lendRecord(user);
-            } else if (record.getState().getClass().equals(RecordLendedState.class) && user.equals(record.getLendedToUsername())) {
+            } else if (record.getState().getClass().equals(RecordLendedState.class) && user.equals(record.getLentTo())) {
                 // Hvis den er udlejet, og lejeren har trykket
                 record.returnRecord();
-            } else if (record.getState().getClass().equals(RecordLendedState.class) && !user.equals(record.getLendedToUsername())) {
+            } else if (record.getState().getClass().equals(RecordLendedState.class) && !user.equals(record.getLentTo())) {
                 // Hvis den er udlejet, og en anden har trykket
                 record.reserveRecord(user);
-            } else if (record.getState().getClass().equals(RecordReservedState.class) && user.equals(record.getLendedToUsername())) {
+            } else if (record.getState().getClass().equals(RecordReservedState.class) && user.equals(record.getLentTo())) {
                 // Hvis den er reserveret, og lejeren har trykket
                 record.returnRecord();
             } else {
@@ -115,8 +115,8 @@ public class RecordListViewModel implements PropertyChangeListener {
         return canEditProperty;
     }
 
-    public StringProperty getLoanReserveReturnProperty() {
-        return loanReserveReturnProperty;
+    public StringProperty getLoanReserveReturnTextProperty() {
+        return loanReserveReturnTextProperty;
     }
 }
 

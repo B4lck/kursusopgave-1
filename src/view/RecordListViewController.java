@@ -49,7 +49,7 @@ public class RecordListViewController extends ViewController<RecordListViewModel
             loanReserveReturnButton.setDisable(!newValue);
         });
 
-        loanReserveReturnButton.textProperty().bind(getViewModel().getLoanReserveReturnProperty());
+        loanReserveReturnButton.textProperty().bind(getViewModel().getLoanReserveReturnTextProperty());
     }
 
     @FXML

@@ -31,8 +31,8 @@ public class ViewHandler {
         Region root = null;
 
         switch (view) {
-            case RECORD_LIST -> root = loadView(view, viewModelFactory.getRecordListViewModel(), this);
-            case MANAGE_RECORD -> root = loadView(view, viewModelFactory.getManageRecordViewModel(), this);
+            case RECORD_LIST -> root = getRoot(view, viewModelFactory.getRecordListViewModel(), this);
+            case MANAGE_RECORD -> root = getRoot(view, viewModelFactory.getManageRecordViewModel(), this);
         }
 
         if (root == null) {
@@ -51,11 +51,7 @@ public class ViewHandler {
         primaryStage.show();
     }
 
-    public void closeView() {
-        primaryStage.close();
-    }
-
-    private <T> Region loadView(ViewID viewId, T viewModel, ViewHandler viewHandler) {
+    private <T> Region getRoot(ViewID viewId, T viewModel, ViewHandler viewHandler) {
         ViewController<T> vc = controllers.get(viewId.name());
 
         if (vc == null) {
@@ -75,6 +71,5 @@ public class ViewHandler {
 
         return vc.getRoot();
     }
-
 
 }

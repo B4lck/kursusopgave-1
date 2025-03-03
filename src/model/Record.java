@@ -5,16 +5,13 @@ public class Record {
     private String artist;
     private int year;
     private RecordState state;
-
-    // TILFØJ TIL UML
-    private String lendedToUsername;
+    private String lentTo;
     private boolean remove = false;
 
     public Record(String title, String artist, int year) {
         set(title, artist, year);
     }
 
-    // TILFØJ TIL UML
     public void set(String title, String artist, int year) {
         this.title = title;
         this.artist = artist;
@@ -46,37 +43,31 @@ public class Record {
         return remove;
     }
 
-    // OPDATER UML
     public void lendRecord(String username) {
         state.lendRecord(username);
     }
 
-    // OPDATER UML
     public void reserveRecord(String username) {
         state.reserveRecord(username);
     }
 
-    // OPDATER UML
     public void removeRecord() {
         state.removeRecord();
     }
 
-    // OPDATER UML
     public void returnRecord() {
         state.returnRecord();
     }
 
-    // OPDATER UML
-    public void setLendedTo(String lendTo) {
-        this.lendedToUsername = lendTo;
+    public void setLentTo(String lendTo) {
+        this.lentTo = lendTo;
     }
 
-    // OPDATER UML
     public void setRemove(boolean remove) {
         this.remove = remove;
     }
 
-    public String getLendedToUsername() {
-        return this.lendedToUsername;
+    public String getLentTo() {
+        return this.lentTo;
     }
 }

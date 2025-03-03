@@ -44,7 +44,7 @@ public class ManageRecordViewModel {
         editableProperty.set(!this.viewState.isRemoveRecord());
     }
 
-    public void updateRecord() {
+    private void updateRecord() {
         Record record = this.viewState.getSelectedRecord();
         record.set(titleProperty.get(), artistProperty.get(), yearProperty.get());
     }
@@ -53,7 +53,7 @@ public class ManageRecordViewModel {
         model.addRecord(new Record(titleProperty.get(), artistProperty.get(), yearProperty.get()));
     }
 
-    public void removeRecord() {
+    private void removeRecord() {
         Record record = this.viewState.getSelectedRecord();
         model.removeRecord(record);
     }
