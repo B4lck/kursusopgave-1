@@ -61,11 +61,11 @@ public class RecordListViewModel implements PropertyChangeListener {
     }
 
     public void addEditRecord() {
+        viewState.setRemoveRecord(false);
     }
 
     public void removeRecord() {
         viewState.setRemoveRecord(true);
-        clear();
     }
 
     public void loanReserveReturnRecord() {
