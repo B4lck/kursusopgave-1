@@ -12,6 +12,7 @@ import model.Record;
 
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
+import java.util.Objects;
 
 public class RecordListViewModel implements PropertyChangeListener {
     private ObservableList<SimpleRecordViewModel> list = FXCollections.observableArrayList();
@@ -27,7 +28,16 @@ public class RecordListViewModel implements PropertyChangeListener {
 
     @Override
     public void propertyChange(PropertyChangeEvent evt) {
-        Platform.runLater(this::clear);
+        Platform.runLater(() -> {
+            if (evt.getPropertyName().equals("Update")) {
+                for (SimpleRecordViewModel rvm : this.list) {
+                    rvm.update();
+                }
+            }
+            else {
+                clear();
+            }
+        });
     }
 
     public RecordListViewModel(Model model, ViewState viewState) {
@@ -80,18 +90,15 @@ public class RecordListViewModel implements PropertyChangeListener {
         String user = userNameProperty.get();
 
         try {
-            if (record.getState().getClass().equals(RecordAvailableState.class)) {
-                // Hvis den er tilgængelig
-                record.lendRecord(user);
-            } else if (record.getState().getClass().equals(RecordLendedState.class) && user.equals(record.getLentTo())) {
+            if (user.equals(record.getLentTo())) {
                 // Hvis den er udlejet, og lejeren har trykket
                 record.returnRecord();
-            } else if (record.getState().getClass().equals(RecordLendedState.class) && !user.equals(record.getLentTo())) {
+            } else if (record.getState().getClass().equals(RecordAvailableState.class)) {
+                // Hvis den er tilgængelig
+                record.lendRecord(user);
+            } else if (record.getState().getClass().equals(RecordLendedState.class)) {
                 // Hvis den er udlejet, og en anden har trykket
                 record.reserveRecord(user);
-            } else if (record.getState().getClass().equals(RecordReservedState.class) && user.equals(record.getLentTo())) {
-                // Hvis den er reserveret, og lejeren har trykket
-                record.returnRecord();
             } else {
                 throw new IllegalStateException("Der foregår noget mystisk");
             }
@@ -134,16 +141,14 @@ public class RecordListViewModel implements PropertyChangeListener {
         Record record = viewState.getSelectedRecord();
         if (record == null) return;
 
-        if (record.getState().getClass() == RecordLendedState.class) {
-            if (record.getLentTo().equals(userNameProperty.getValue())) {
-                text = "Retuner";
-            } else {
-                text = "Reserver";
-            }
+        if (userNameProperty.getValue().equals(record.getLentTo())) {
+            text = "Returner";
+        } else if (record.getState().getClass() == RecordLendedState.class) {
+            text = "Reserver";
         } else if (record.getState().getClass() == RecordAvailableState.class) {
             text = "Lån";
-        } else if (record.getState().getClass() == RecordReservedState.class) {
-            text = "Utilængelig";
+        } else {
+            text = "Utilgængelig";
         }
 
         loanReserveReturnTextProperty.setValue(text);

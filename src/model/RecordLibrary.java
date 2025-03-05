@@ -24,18 +24,18 @@ public class RecordLibrary implements Model, PropertyChangeSubject {
     @Override
     public void addRecord(Record record) {
         this.records.add(record);
-        support.firePropertyChange("Added Record", null, record);
+        support.firePropertyChange("Add", null, record);
     }
 
     @Override
     public void removeRecord(Record record) {
-        this.records.remove(record);
-        support.firePropertyChange("Removed Record", record, null);
+        record.removeRecord();
     }
 
     private void removeAllToRemoveRecord() {
         for (int i = records.size() - 1; i >= 0; i--) {
             if (records.get(i).isRemove()) {
+                support.firePropertyChange("Remove", records.get(i), null);
                 records.remove(i);
             }
         }
@@ -43,7 +43,7 @@ public class RecordLibrary implements Model, PropertyChangeSubject {
 
     @Override
     public void update() {
-        support.firePropertyChange("update", false, true);
+        support.firePropertyChange("Update", false, true);
     }
 
     @Override

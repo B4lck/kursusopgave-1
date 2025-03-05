@@ -31,6 +31,6 @@ public class RecordReservedState implements RecordState{
 
     @Override
     public String toString() {
-        return "Reserveret";
+        return "Reserveret til " + reservedFor + ", udlånt til " + record.getLentTo();
     }
 }

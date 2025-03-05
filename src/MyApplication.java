@@ -6,8 +6,6 @@ import model.RecordLibrary;
 import view.ViewHandler;
 import viewmodel.ViewModelFactory;
 
-import java.sql.SQLOutput;
-
 public class MyApplication extends Application
 {
     private Model model;
@@ -29,7 +27,7 @@ public class MyApplication extends Application
         ViewHandler view = new ViewHandler(viewModelFactory);
         view.start(primaryStage);
 
-        //doThreadsTingOgSager();
+        doThreadsTingOgSager();
     }
 
     private void doThreadsTingOgSager() {

@@ -1,6 +1,7 @@
 package viewmodel;
 
 import javafx.beans.property.*;
+import javafx.beans.value.ObservableValue;
 import model.Model;
 import model.Record;
 
@@ -12,6 +13,7 @@ public class ManageRecordViewModel {
     private StringProperty stateProperty = new SimpleStringProperty();
     private ObjectProperty<Boolean> editableProperty = new SimpleObjectProperty<>();
     private StringProperty errorProperty = new SimpleStringProperty();
+    private StringProperty acceptTextProperty = new SimpleStringProperty();
 
     private Model model;
     private ViewState viewState;
@@ -22,23 +24,30 @@ public class ManageRecordViewModel {
     }
 
     public void reset() {
-        if (this.viewState.isRemoveRecord()) {
-            // Fjern
-            manageHeaderTitleProperty.set("Fjern " + this.viewState.getSelectedRecord().getTitle());
-        } else if (this.viewState.getSelectedRecord() != null) {
-            // Rediger
-            manageHeaderTitleProperty.set("Rediger " + this.viewState.getSelectedRecord().getTitle());
+        if (this.viewState.getSelectedRecord() != null) {
             titleProperty.setValue(this.viewState.getSelectedRecord().getTitle());
             artistProperty.setValue(this.viewState.getSelectedRecord().getArtist());
             yearProperty.setValue(this.viewState.getSelectedRecord().getYear());
-            stateProperty.setValue(this.viewState.getSelectedRecord().getState().getClass().getSimpleName());
+            stateProperty.setValue(this.viewState.getSelectedRecord().getState().toString());
         } else {
-            // Opret
-            manageHeaderTitleProperty.set("Opret ny rekord");
             titleProperty.setValue("");
             artistProperty.setValue("");
             yearProperty.setValue(0);
             stateProperty.setValue("");
+        }
+
+        if (this.viewState.isRemoveRecord()) {
+            // Fjern
+            manageHeaderTitleProperty.set("Fjern " + this.viewState.getSelectedRecord().getTitle());
+            acceptTextProperty.setValue("Fjern");
+        } else if (this.viewState.getSelectedRecord() != null) {
+            // Rediger
+            manageHeaderTitleProperty.set("Rediger " + this.viewState.getSelectedRecord().getTitle());
+            acceptTextProperty.setValue("Gem");
+        } else {
+            // Opret
+            manageHeaderTitleProperty.set("Opret ny rekord");
+            acceptTextProperty.setValue("Opret");
         }
 
         editableProperty.set(!this.viewState.isRemoveRecord());
@@ -96,4 +105,7 @@ public class ManageRecordViewModel {
         return errorProperty;
     }
 
+    public StringProperty getAcceptTextProperty() {
+        return acceptTextProperty;
+    }
 }

@@ -5,15 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0aebdb1a-c84b-4bcd-a93c-e2535af31749" name="Changes" comment="Vi er bare overhovedet ikke færdige med okay">
+      <change afterPath="$PROJECT_DIR$/src/view/StringIntegerConverter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MyApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/RecordAvailableState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/RecordAvailableState.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/RecordLendedState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/RecordLendedState.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/RecordLendedToRemoveState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/RecordLendedToRemoveState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/RecordReadyToRemoveState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/RecordReadyToRemoveState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/RecordLibrary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/RecordLibrary.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/model/RecordReservedState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/RecordReservedState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/RecordState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/RecordState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/ManageRecordView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/ManageRecordView.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/ManageRecordViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/ManageRecordViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/RecordListViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/RecordListViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/viewmodel/ManageRecordViewModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/viewmodel/ManageRecordViewModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/viewmodel/RecordListViewModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/viewmodel/RecordListViewModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/viewmodel/SimpleRecordViewModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/viewmodel/SimpleRecordViewModel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,6 +84,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="view" />
       <recent name="model" />
     </key>
   </component>

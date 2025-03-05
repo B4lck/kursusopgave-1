@@ -1,6 +1,8 @@
 package view;
 
+import javafx.beans.binding.Bindings;
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import viewmodel.ManageRecordViewModel;
@@ -18,6 +20,8 @@ public class ManageRecordViewController extends ViewController<ManageRecordViewM
     private Label stateProperty;
     @FXML
     private Label errorLabel;
+    @FXML
+    private Button acceptButton;
 
     public void reset() {
         getViewModel().reset();
@@ -28,9 +32,10 @@ public class ManageRecordViewController extends ViewController<ManageRecordViewM
         headerTitle.textProperty().bind(getViewModel().getManageHeaderTitleProperty());
         titleField.textProperty().bindBidirectional(getViewModel().getTitleProperty());
         artistField.textProperty().bindBidirectional(getViewModel().getArtistProperty());
-        // year field
+        Bindings.bindBidirectional(yearField.textProperty(), getViewModel().getYearProperty(), new StringIntegerConverter(0));
         stateProperty.textProperty().bind(getViewModel().getStateProperty());
         errorLabel.textProperty().bind(getViewModel().getErrorProperty());
+        acceptButton.textProperty().bind(getViewModel().getAcceptTextProperty());
 
         getViewModel().getEditableProperty().addListener((evt, oldValue, newValue) -> {
             titleField.setDisable(!newValue);

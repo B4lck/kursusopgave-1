@@ -32,6 +32,6 @@ public class RecordLendedState implements RecordState {
 
     @Override
     public String toString() {
-        return "Udlånt";
+        return "Udlånt til " + record.getLentTo();
     }
 }

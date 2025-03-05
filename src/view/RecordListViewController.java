@@ -13,7 +13,7 @@ public class RecordListViewController extends ViewController<RecordListViewModel
     @FXML
     private TableColumn<SimpleRecordViewModel, String> artistColumn;
     @FXML
-    private TableColumn<SimpleRecordViewModel, String> yearColumn;
+    private TableColumn<SimpleRecordViewModel, Number> yearColumn;
     @FXML
     private TableColumn<SimpleRecordViewModel, String> loanStateColumn;
     @FXML
@@ -35,7 +35,7 @@ public class RecordListViewController extends ViewController<RecordListViewModel
     protected void init() {
         titleColumn.setCellValueFactory(cellData -> cellData.getValue().getTitleProperty());
         artistColumn.setCellValueFactory(cellData -> cellData.getValue().getArtistProperty());
-//        yearColumn.setCellValueFactory(cellData -> cellData.getValue().getYearProperty());
+        yearColumn.setCellValueFactory(cellData -> cellData.getValue().getYearProperty());
         loanStateColumn.setCellValueFactory(cellData -> cellData.getValue().getStateProperty());
         recordsTable.setItems(getViewModel().getList());
 

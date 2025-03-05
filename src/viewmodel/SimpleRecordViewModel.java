@@ -13,8 +13,6 @@ public class SimpleRecordViewModel {
     private IntegerProperty yearProperty;
     private StringProperty stateProperty;
 
-    public SimpleRecordViewModel() {}
-
     public SimpleRecordViewModel(Record record) {
         this.record = record;
 
@@ -23,10 +21,14 @@ public class SimpleRecordViewModel {
         yearProperty = new SimpleIntegerProperty();
         stateProperty = new SimpleStringProperty();
 
+        update();
+    }
+
+    public void update() {
         this.titleProperty.setValue(record.getTitle());
         this.artistProperty.setValue(record.getArtist());
         this.yearProperty.setValue(record.getYear());
-        this.stateProperty.setValue(record.getState().getClass().getSimpleName());
+        this.stateProperty.setValue(record.getState().toString());
     }
 
     public StringProperty getTitleProperty() {
