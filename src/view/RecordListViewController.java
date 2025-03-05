@@ -41,6 +41,8 @@ public class RecordListViewController extends ViewController<RecordListViewModel
 
         usernameField.textProperty().bindBidirectional(getViewModel().getUserNameProperty());
 
+        errorLabel.textProperty().bind(getViewModel().getErrorProperty());
+
         getViewModel().getSelectedRecordProperty().bind(recordsTable.getSelectionModel().selectedItemProperty());
 
         getViewModel().getCanEditProperty().addListener((evt, oldValue, newValue) -> {

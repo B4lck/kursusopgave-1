@@ -1,7 +1,6 @@
 package viewmodel;
 
 import javafx.beans.property.*;
-import javafx.beans.value.ObservableValue;
 import model.Model;
 import model.Record;
 

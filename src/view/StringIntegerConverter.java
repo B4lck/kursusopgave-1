@@ -4,16 +4,9 @@ import javafx.util.StringConverter;
 
 public class StringIntegerConverter extends StringConverter<Number>
 {
-    private int emptyValue;
-
-    public StringIntegerConverter(int emptyValue)
-    {
-        this.emptyValue = emptyValue;
-    }
-
     @Override public String toString(Number n)
     {
-        if (n == null || n.intValue() == emptyValue)
+        if (n == null || n.intValue() == 0)
         {
             return "";
         }
@@ -28,7 +21,7 @@ public class StringIntegerConverter extends StringConverter<Number>
         }
         catch (Exception e)
         {
-            return emptyValue;
+            return 0;
         }
     }
 }
