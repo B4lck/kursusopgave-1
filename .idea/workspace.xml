@@ -4,18 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0aebdb1a-c84b-4bcd-a93c-e2535af31749" name="Changes" comment="ManageRecordViewModel">
+    <list default="true" id="0aebdb1a-c84b-4bcd-a93c-e2535af31749" name="Changes" comment="Lidt af hvert Malthe kan leje med">
+      <change afterPath="$PROJECT_DIR$/src/Customer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kursusopgave-1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/kursusopgave-1.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kursusopgave-1/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kursusopgave-1/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kursusopgave-1/.idea/kursusopgave-1.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kursusopgave-1/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kursusopgave-1/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kursusopgave-1/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kursusopgave-1/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/ManageRecordViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/ManageRecordViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/viewmodel/ManageRecordViewModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/viewmodel/ManageRecordViewModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MyApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Model.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Model.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/RecordLibrary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/RecordLibrary.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/viewmodel/RecordListViewModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/viewmodel/RecordListViewModel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,6 +21,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -38,12 +34,12 @@
     &quot;assignee&quot;: &quot;Malthesl&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/B4lck/kursusopgave-1.git",
-    "accountId": "3c0a7bea-ecbe-4af2-a26d-9afeb13c07de"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/B4lck/kursusopgave-1.git&quot;,
+    &quot;accountId&quot;: &quot;3c0a7bea-ecbe-4af2-a26d-9afeb13c07de&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 1
@@ -107,6 +103,9 @@
       <workItem from="1740990942884" duration="3939000" />
       <workItem from="1740997538224" duration="332000" />
       <workItem from="1740998125253" duration="3521000" />
+      <workItem from="1741036946849" duration="241000" />
+      <workItem from="1741092155680" duration="20000" />
+      <workItem from="1741164344433" duration="2542000" />
     </task>
     <task id="LOCAL-00001" summary="Elsker java">
       <option name="closed" value="true" />
@@ -164,11 +163,30 @@
       <option name="project" value="LOCAL" />
       <updated>1740995022618</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Lidt af hvert Malthe kan leje med">
+      <option name="closed" value="true" />
+      <created>1741036978012</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1741036978012</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Elsker java" />
@@ -179,6 +197,7 @@
     <MESSAGE value="Diverse" />
     <MESSAGE value="ManageRecordViewModel" />
     <MESSAGE value="Mindre ting" />
-    <option name="LAST_COMMIT_MESSAGE" value="Mindre ting" />
+    <MESSAGE value="Lidt af hvert Malthe kan leje med" />
+    <option name="LAST_COMMIT_MESSAGE" value="Lidt af hvert Malthe kan leje med" />
   </component>
 </project>

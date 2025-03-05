@@ -17,7 +17,7 @@ public class RecordLibrary implements Model, PropertyChangeSubject {
 
     @Override
     public ArrayList<Record> getAllRecords() {
-        update();
+        removeAllToRemoveRecord();
         return records;
     }
 
@@ -33,13 +33,17 @@ public class RecordLibrary implements Model, PropertyChangeSubject {
         support.firePropertyChange("Removed Record", record, null);
     }
 
-    @Override
-    public void update() {
+    private void removeAllToRemoveRecord() {
         for (int i = records.size() - 1; i >= 0; i--) {
             if (records.get(i).isRemove()) {
                 records.remove(i);
             }
         }
+    }
+
+    @Override
+    public void update() {
+        support.firePropertyChange("update", false, true);
     }
 
     @Override
