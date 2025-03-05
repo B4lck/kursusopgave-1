@@ -27,4 +27,9 @@ public class RecordReadyToRemoveState implements RecordState {
     public void returnRecord() {
         throw new IllegalStateException("Pladen skal allerede fjernes");
     }
+
+    @Override
+    public String toString() {
+        return "Fjernes";
+    }
 }

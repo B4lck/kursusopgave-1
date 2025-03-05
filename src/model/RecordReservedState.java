@@ -28,4 +28,9 @@ public class RecordReservedState implements RecordState{
     public void returnRecord() {
         record.setState(new RecordLendedState(record, reservedFor));
     }
+
+    @Override
+    public String toString() {
+        return "Reserveret";
+    }
 }

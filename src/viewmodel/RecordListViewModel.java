@@ -40,6 +40,10 @@ public class RecordListViewModel implements PropertyChangeListener {
             setSelectedRecord(newValue);
         });
 
+        userNameProperty.addListener((evt, oldValue, newValue) -> {
+            updateLoanReserveReturnTextProperty();
+        });
+
         clear();
     }
 
@@ -57,8 +61,9 @@ public class RecordListViewModel implements PropertyChangeListener {
 
     public void setSelectedRecord(SimpleRecordViewModel recordViewModel) {
         viewState.setSelectedRecord(recordViewModel == null ? null : recordViewModel.getRecord());
-
         canEditProperty.set(recordViewModel != null);
+
+        updateLoanReserveReturnTextProperty();
     }
 
     public void addEditRecord() {
@@ -90,6 +95,9 @@ public class RecordListViewModel implements PropertyChangeListener {
             } else {
                 throw new IllegalStateException("Der foregår noget mystisk");
             }
+
+            updateLoanReserveReturnTextProperty();
+
             clear();
         } catch (Exception e) {
             errorProperty.set(e.getMessage());
@@ -118,6 +126,27 @@ public class RecordListViewModel implements PropertyChangeListener {
 
     public StringProperty getLoanReserveReturnTextProperty() {
         return loanReserveReturnTextProperty;
+    }
+
+    private void updateLoanReserveReturnTextProperty() {
+        String text = "";
+
+        Record record = viewState.getSelectedRecord();
+        if (record == null) return;
+
+        if (record.getState().getClass() == RecordLendedState.class) {
+            if (record.getLentTo().equals(userNameProperty.getValue())) {
+                text = "Retuner";
+            } else {
+                text = "Reserver";
+            }
+        } else if (record.getState().getClass() == RecordAvailableState.class) {
+            text = "Lån";
+        } else if (record.getState().getClass() == RecordReservedState.class) {
+            text = "Utilængelig";
+        }
+
+        loanReserveReturnTextProperty.setValue(text);
     }
 }
 

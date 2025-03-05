@@ -29,7 +29,7 @@ public class MyApplication extends Application
         ViewHandler view = new ViewHandler(viewModelFactory);
         view.start(primaryStage);
 
-        doThreadsTingOgSager();
+        //doThreadsTingOgSager();
     }
 
     private void doThreadsTingOgSager() {

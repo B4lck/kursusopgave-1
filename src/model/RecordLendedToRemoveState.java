@@ -27,4 +27,9 @@ public class RecordLendedToRemoveState implements RecordState {
         record.setLentTo(null);
         record.setState(new RecordLendedToRemoveState(record));
     }
+
+    @Override
+    public String toString() {
+        return "Skal fjernes";
+    }
 }

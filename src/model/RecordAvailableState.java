@@ -29,4 +29,9 @@ public class RecordAvailableState implements RecordState {
     public void returnRecord() {
         throw new IllegalStateException("Pladen er ikke lånt");
     }
+
+    @Override
+    public String toString() {
+        return "Tilgængelig";
+    }
 }

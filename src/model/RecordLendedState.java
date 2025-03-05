@@ -29,4 +29,9 @@ public class RecordLendedState implements RecordState {
         record.setLentTo(null);
         record.setState(new RecordAvailableState(record));
     }
+
+    @Override
+    public String toString() {
+        return "Udlånt";
+    }
 }
